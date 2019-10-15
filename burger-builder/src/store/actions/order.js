@@ -67,7 +67,7 @@ export const fetchOrders = (token, userId) => {
     return dispatch => {
         dispatch(fetchOrdersStart());
         console.log(userId);
-        const queryParams = '?auth=' + token + '&orderBy&"userId"&equalTo="' + userId + '"';
+        const queryParams = '?auth=' + token + '&orderBy="userId"&equalTo="' + userId + '"';
         console.log(6);
          axios.get('/orders.json' + queryParams)
             .then(res => {
